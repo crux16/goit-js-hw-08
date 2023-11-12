@@ -7,7 +7,7 @@ import { galleryItems } from './gallery-items';
 const galleryUl = document.querySelector('ul.gallery');
 const photosMarkup = createGalleryItem(galleryItems);
 
-
+galleryUl.style.listStyle = 'none';
 galleryUl.insertAdjacentHTML('beforeend',photosMarkup);
 
 function createGalleryItem(element) {
