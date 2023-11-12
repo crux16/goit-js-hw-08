@@ -5,7 +5,7 @@ const formSubmit = document.querySelector('.feedback-form');
 const formHandler = (event) =>     {
     event.preventDefault();
     console.log(JSON.parse(localStorage.getItem('feedback-form-state')));
-    localStorage.clear();
+    localStorage.removeItem('feedback-form-state');
     event.currentTarget.reset();       
 };
 const inputHandler = (event) => {
