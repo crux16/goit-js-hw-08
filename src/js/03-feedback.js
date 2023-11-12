@@ -1,6 +1,13 @@
 import throttle from 'lodash.throttle';
 
 const formSubmit = document.querySelector('.feedback-form');
+const value = localStorage.getItem('feedback-form-state');
+if(value!==null){
+    const parseValue = JSON.parse(value);
+    const {email,message} = formSubmit;
+    email.value = parseValue.email;
+    message.value = parseValue.message;
+}
 
 const formHandler = (event) =>     {
     event.preventDefault();
